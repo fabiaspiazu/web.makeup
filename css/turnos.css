@@ -1,0 +1,76 @@
+
+/* Estilo general del body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 20px;
+    padding: 0;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #222;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Tabla general */
+.style-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+.style-header {
+    background-color: #343a40;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Filas de datos */
+.style-dato {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.95rem;
+}
+
+/* Alternar color de fondo para filas */
+tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* Hover sobre las filas */
+tbody tr:hover {
+    background-color: #e0f7fa;
+    transition: background-color 0.3s ease;
+}
+
+/* Ajustes responsive básicos */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

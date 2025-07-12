@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="contenedor-portada">  <img class="imagen-portada" src="images/portada.png" alt="portada"></div>
+    <form action=" "id="formularioMakeup">
+        <label for="Nombre"> Nombre Completo</label>
+        <input type="text" name="nombre" id="nombre"required> 
+        <label for="email"> email</label> 
+        <input type="email" name="email" id="correo"required>
+        <label for="fecha">Fecha del turno</label>
+        <input type="date" id="fecha" name="fecha" required />
+      
+        <label for="hora">Hora del turno</label>
+        <input type="time" id="hora" name="hora" required />
+      
+        <label for="servicio">Tipo de maquillaje</label>
+        <select id="servicio" name="servicio" required>
+          <option value="">Seleccionar...</option>
+          <option value="social">Social</option>
+          <option value="novia">Novia</option>
+          <option value="clases">Clases de automaquillaje</option>
+          <option value="artístico">Artístico</option>
+        </select>
+      
+        <label for="lugar">Lugar</label>
+        <select id="lugar" name="lugar" required>
+          <option value="">Seleccionar...</option>
+          <option value="local">En el local</option>
+          <option value="domicilio">A domicilio</option>
+        </select>
+      
+        <label for="comentarios">Comentarios</label>
+        <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+      
+        <label for="celular"> celular</label>
+        <input type="tel" name="celular" id="celular" required>
+        <button id="miBoton" type="submit">sacar turno</button>
+    </form>
+
+    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
