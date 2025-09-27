@@ -4,7 +4,7 @@ async function cargarDatos() {
     const body=document.getElementById("datos")
     const res=await fetch('http://localhost:3000/turnos/listado')
  const datos=await res.json()
- console.log(datos)
+
    datos.forEach(turno =>{
     body.innerHTML+=`<tr class="style-fila">
     <td class="style-dato">${turno.nombre}</td>
