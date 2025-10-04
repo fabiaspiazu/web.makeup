@@ -1,3 +1,4 @@
+
 // script.js
 document.getElementById("formularioMakeup").addEventListener("submit", async function (evento) {
   evento.preventDefault()//evitamos el comportamiento para evitar el redireccionamiento
@@ -14,14 +15,21 @@ document.getElementById("formularioMakeup").addEventListener("submit", async fun
     const turno = { contacto: celular, email: email, nombre: nombre, fecha: fecha, hora: hora, lugar: lugar, comentario: comentario, servicio: servicio }
   await fetch ("http://localhost:3000/turnos/guardar",{
     method:"POST",
+    headers:{"Content-Type": "application/json"},
     body:JSON.stringify(turno)
 
   })
-  
+  .then(res=>res.json())
+  .then(data=>console.log(data))
+  .catch(error=>console.log(error))
+  alert('creado correctamente')
+  const formulario= document.getElementById('formularioMakeup')
+  formulario.reset()
     
     // Podés enviar la info a un servidor o guardarla
   } else {
     alert("Por favor, completá todos los campos obligatorios.");
+
   }
 
 })
