@@ -29,12 +29,4 @@ const sql="INSERT INTO makeup.turnos(`nombre`,`comentario`,`email`,`fecha`,`hora
 }
 
     export default guardarTurno
-    /*{
-  contacto: '3513492786',
-  email: 'faby29072@gmail.com',
-  nombre: 'fabiola aspiazu',
-  fecha: '2025-10-21',
-  hora: '15:32',
-  lugar: 'domicilio',
-  comentario: 'peinado',
-  servicio: 'novia'*/
+   

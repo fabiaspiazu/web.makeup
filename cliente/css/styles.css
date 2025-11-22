@@ -2,6 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background: #eba6a6;
     padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   form {
     background: white;
@@ -23,13 +26,25 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-  button {
+  .enviar {
     background-color: #00bcd4;
     color: white;
     border: none;
     cursor: pointer;
     margin-top: 15px;
   }
+  .button-listado {
+    background-color: rgb(26, 179, 196);
+    color: #dee2e6;
+    display: inline-block; 
+    padding:10px;
+    margin-top: 10px;
+    
+
+    
+  }
+
+  
   button:hover {
     background-color: #0097a7;
   }
