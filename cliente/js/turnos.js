@@ -14,9 +14,28 @@ async function cargarDatos() {
     <td class="style-dato">${turno.hora}</td>
     <td class="style-dato">${turno.lugar}</td>
     <td class="style-dato">${turno.servicio}</td>
-    <td class="style-dato">${turno.contacto}</td></tr>`
+    <td class="style-dato">${turno.contacto}</td>
+    <td class="style-dato"> <button onclick="${eliminar(turno.id)}" id="boton-eliminar">eliminar</button></td></tr>`
 
-  
+
+
+    
+
+  const botonEliminar=document.getElementById("boton-eliminar")
+botonEliminar.addEventListener("click",async function eliminar(params) {
+   await fetch (`http://localhost:3000/turnos/eliminar/${params}`,{
+    method:"DELETE",
+   
+
+
+  })
+  .then(res=>res.json())
+  .then(data=>console.log(data))
+  .catch(error=>console.log(error))
+
+   console.log(params)
+}
+)
    })
 
 
