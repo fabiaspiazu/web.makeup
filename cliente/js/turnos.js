@@ -16,13 +16,14 @@ async function cargarDatos() {
     <td class="style-dato">${turno.lugar}</td>
     <td class="style-dato">${turno.servicio}</td>
     <td class="style-dato">${turno.contacto}</td>
-    <td class="style-dato"> <button class="boton-eliminar" id="boton-eliminar">eliminar</button></td></tr>`
+    <td class="style-dato container"> <button class="btn btn-danger" id="boton-eliminar">eliminar</button></tr>
+     <button class="btn btn-warning" id="boton-modificar"data-bs-toggle="modal" data-bs-target="#exampleModal">modificar</button></td></tr>`
 
 
 
     
 
-  const botonEliminar=fila.querySelector(".boton-eliminar")
+  const botonEliminar=fila.querySelector("#boton-eliminar")
 botonEliminar.addEventListener("click",async function () {
    await fetch (`http://localhost:3000/turnos/eliminar/${turno.id}`,{
     method:"DELETE",
