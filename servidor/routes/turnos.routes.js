@@ -1,6 +1,7 @@
 import listar from "../controllers/turnos/listarTurnos.js";
 import { Router } from "express";
 import guardarTurno from "../controllers/turnos/guardarTurnos.js"
+import buscarTurno from "../controllers/turnos/buscarTurno.js"
 import {eliminarTurno} from "../controllers/turnos/eliminarTurnos.js"
 const rutaTurnos= Router()
 rutaTurnos.get("/listado",listar)
@@ -12,4 +13,5 @@ rutaTurnos.get("/listado",listar)
 rutaTurnos.delete("/eliminar/:id",eliminarTurno)
 
 rutaTurnos.post("/guardar",guardarTurno)
+rutaTurnos.get("/buscar/:id",buscarTurno)
 export default rutaTurnos
