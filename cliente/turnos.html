@@ -1,33 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><link rel="stylesheet" href="css/turnos.css">
+<head>
+    <link rel="stylesheet" href="css/turnos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>turnos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <h1>listado de turnos</h1>
-    <button class="button-direccion"><a href="../cliente/index.html"style="text-decoration:none">crear Turno</a></button>
-    <table class="style-tabla">
+    <button class="btn btn-primary m-1"><a href="../cliente/index.html" style="text-decoration:none;color:white">crear
+            Turno</a></button>
+    <div class="container">
+        <table class="style-tabla mx-2">
 
-        <thead class="style-header">
-            <th>nombre</th>
-            <th>comentario</th>
-            <th>email</th>
-            <th>fecha</th>
-            <th>hora</th>
-            <th>lugar</th>
-            <th>tipo de maquillaje</th>
-            <th>contacto</th>
-            <th>acción</th>
-        </thead>
-        <tbody id="datos">
-           
-            
-        </tbody>
-    </table>
+            <thead class="style-header">
+                <th>nombre</th>
+                <th>comentario</th>
+                <th>email</th>
+                <th>fecha</th>
+                <th>hora</th>
+                <th>lugar</th>
+                <th>tipo de maquillaje</th>
+                <th>contacto</th>
+                <th>acción</th>
+
+            </thead>
+
+            <tbody id="datos">
+
+
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Turno</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre-cliente">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">comentario:</label>
+                            <input type="text" class="form-control" id="comentario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">email:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">fecha:</label>
+                            <input type="date" class="form-control" id="fecha-turno">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">hora:</label>
+                            <input type="time" class="form-control" id="hora-turno">
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">lugar:</label>
+                            <select id="lugar" name="lugar" required class="form-select">
+                                <option value="">Seleccionar...</option>
+                                <option value="local">En el local</option>
+                                <option value="domicilio">A domicilio</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">tipo de maquilaje:</label>
+                            <select id="servicio" name="servicio" required class="form-select">
+                                <option value="">Seleccionar...</option>
+                                <option value="social">Social</option>
+                                <option value="novia">Novia</option>
+                                <option value="clases">Clases de automaquillaje</option>
+                                <option value="artístico">Artístico</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">contacto:</label>
+                            <input type="tel" class="form-control" id="contacto-cliente">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="js/turnos.js"> </script>

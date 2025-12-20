@@ -20,7 +20,7 @@ h1 {
 
 /* Tabla general */
 .style-tabla {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     background-color: #fff;
